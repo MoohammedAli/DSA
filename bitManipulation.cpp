@@ -4,15 +4,6 @@
 #include <vector>
 using namespace std;
 
-void subsets(vector<vector<int> >& ans, vector<int>& subset, vector<int>& nums, int idx){
-  ans.push_back(subset);
-  for(int i=idx;i<nums.size();i++){
-    subset.push_back(nums[i]);
-    subsets(ans, subset, nums, i+1);
-    subset.pop_back();
-  }
-}
-
 string decimalToBinary(int n){
   string ans = "";
   while(n){
