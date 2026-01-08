@@ -2,6 +2,7 @@
 #include <queue>
 using namespace std;
 
+
 struct Node {
   int val;
   Node* left;
@@ -13,8 +14,8 @@ Node* insert(Node* root, int x){
   if(!root){
     return new Node(x);
   }
-  if(root->val < x) root->left = insert(root->left, x);
-  else if(root->val > x) root->right = insert(root->right, x);
+  if(root->val > x) root->left = insert(root->left, x);
+  else if(root->val < x) root->right = insert(root->right, x);
   return root;
 }
 
